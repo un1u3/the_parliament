@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Project data artifacts
+chromaVectordb/
+constitution_db/
+
 # C extensions
 *.so
 
