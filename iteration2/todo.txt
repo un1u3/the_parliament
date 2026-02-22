@@ -1,0 +1,16 @@
+Goal: Feed any parliament transcript and receive a clean structutred summary: topics debated, key speakers, decisions made and unresolved issues.
+
+things to do:
+a. Long document processing
+b. Structured output formatting
+c. basic web scrapping to auto-fetch parliament website (or youtube video)
+
+d. generate output
+
+
+what can be used:
+A. Gemini 1.5 flash
+B. BeautifulSoup for web scrapping
+C. Langchain document loaders
+D. Streamlit
+
