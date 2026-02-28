@@ -1,12 +1,14 @@
-import os
+from pathlib import Path
 from langchain_community.document_loaders import PyPDFLoader
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+# for langchan version dep
 try:
     from langchain_classic.chains.summarize import load_summarize_chain
 except ModuleNotFoundError:
     from langchain.chains.summarize import load_summarize_chain
-from langchain_core.documents import Document
+
 from langchain_ollama import OllamaLLM
 # from langchain_text_splitters import RecursiveCharacterTextSplitter
 # from langchain_core.documents import Document
@@ -14,7 +16,7 @@ from langchain_ollama import OllamaLLM
 # from langchain_community.vectorstores import Chroma
 
 def summarize_document(file_path):
-    loader = PyPDFLoader("sample.pdf")
+    loader = PyPDFLoader(file_path)
 
     # Load the documents
     documents = loader.load()
@@ -43,11 +45,12 @@ def summarize_document(file_path):
 
 
 if __name__ == "__main__":
-    document_path = r"iteration2\smaple.pdf"
+    base_dir = Path(__file__).resolve().parent
+    document_path = base_dir / "sample.pdf"
 
-    if os.path.exists(document_path):
-        summary = summarize_document(document_path)
+    if document_path.exists():
+        summary = summarize_document(str(document_path))
         print("\n \n Aaja ko saramsha:")
         print(summary)
     else:
-        print(f"Error: ${document_path} not found")
+        print(f"Error: {document_path} not found")

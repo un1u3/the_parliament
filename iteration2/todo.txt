@@ -14,3 +14,5 @@ B. BeautifulSoup for web scrapping
 C. Langchain document loaders
 D. Streamlit
 
+
+Note : Output is cluttred dont know the reason 
