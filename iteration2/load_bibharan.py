@@ -2,7 +2,10 @@ import os
 from langchain_community.document_loaders import PyPDFLoader
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain.chains.summarize import load_summarize_chain
+try:
+    from langchain_classic.chains.summarize import load_summarize_chain
+except ModuleNotFoundError:
+    from langchain.chains.summarize import load_summarize_chain
 from langchain_core.documents import Document
 from langchain_ollama import OllamaLLM
 # from langchain_text_splitters import RecursiveCharacterTextSplitter
