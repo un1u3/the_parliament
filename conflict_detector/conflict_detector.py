@@ -23,5 +23,7 @@ def search_constitution():
     constitution_db = Chroma(
         persist_directory= '../chromaVectordb'
         embedding_function = embeddings
-
     )
+
+    # seach top 5 results
+    

@@ -1,0 +1,17 @@
+what we are building 
+citizens file complaints about roads, water, electricity 
+
+input : text file or csv file filled with complaints 
+output: 
+TOp Issues 
+1. Road X is broken : 127
+2. electricity pole is not installed  : 123
+3. Corruption against sarakari karmacaari Y 
+
+
+flow
+- load all complaints
+- use ai to categorize 
+- exttract issue and loacation 
+- count how many times it apperead 
+- rank by freq

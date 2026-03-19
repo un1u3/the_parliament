@@ -1,0 +1,20 @@
+i/p : Bill 
+O/p : List all constitutional conflicts
+
+
+Eg senario 
+
+Input : "All news paper must get government approval before posting anything"
+OP : Article X says Y things 
+
+
+Question : Does it conflicts with Constitution 
+Answer : Yes it voialtes Articlel X - prior wak swantrata
+
+flow 
+upload bill ---> extract text from pdf --> check ../chromaVectordb for constitutional assistance 
+--> Compare bill using LLM --> output [Yes it voialtes Articlel X - prior wak swantrata]22
+
+
+Note : Most of the bills I searched are in Nepali might need to find a englsih version or use google-translate 
+to convert nepali to english  for now I am using a informal english bill 
